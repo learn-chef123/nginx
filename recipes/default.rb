@@ -9,10 +9,6 @@ packs = %w(epel-release vim).each do |p|
   not_if "rpm -qa | grep -i #{p}"
  end
 end
-#
-# execute 'yum install epel-release -y'
-#
-# execute 'yum install vim -y'
 
 package 'nginx' do
   version "#{node[:nginx][:version]}"
