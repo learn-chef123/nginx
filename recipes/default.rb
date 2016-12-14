@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-packs = %w(epel-release vim).each do |p|
+packs = %w(epel-release vim-enhanced).each do |p|
   package p do
   not_if "rpm -qa | grep -i #{p}"
  end
