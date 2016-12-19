@@ -1,10 +1,10 @@
-name 'nginx'
+name 'nginx_rpm'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'all_rights'
 description 'Installs/Configures nginx'
 long_description 'Installs/Configures nginx'
-version '0.1.1'
+version '0.1.2'
 
 depends 'yum'
 depends 'yum-epel'
