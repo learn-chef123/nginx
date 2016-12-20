@@ -17,6 +17,7 @@ end
 
 template '/etc/nginx/nginx.conf' do
   source 'nginx.conf.erb'
+  sensitive true
   mode '0644'
   notifies :restart, "service[nginx]", :delayed
 end
@@ -24,6 +25,7 @@ end
 
 template '/etc/nginx/conf.d/default.conf' do
   source 'nginx_default.conf.erb'
+  sensitive true
   mode '0644'
   variables(
       :proxy_pass => node[:nginx][:proxy_pass],
